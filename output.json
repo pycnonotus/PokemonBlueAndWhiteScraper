@@ -1,1 +1,136 @@
-{"info":[{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2010/06/Untitled-2.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/1-1.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/2-3.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/2-2.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/3-3.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/3-2.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/Untitled-2-1.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/4-1.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/23-1.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/5-1.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/34.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/6-1.jpg"},{"thumbnail":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/1-2.jpg","image":"https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/7-1.jpg"}]}
+{
+    "info": [{
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2010/06/Untitled-2.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/1-1.jpg",
+        "id": 0,
+        "name": "Negeveer",
+        "hebrewName": "Negeveer",
+        "type": "&nbsp;18",
+        "ev": "1 מהירות",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "50",
+            "atk": "&nbsp;40",
+            "def": "50",
+            "s_atk": "55",
+            "s_def": "60",
+            "spd": "&nbsp;65",
+            "total": "&nbsp;320"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/2-3.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/2-2.jpg",
+        "id": 1,
+        "name": "Rudorn",
+        "hebrewName": "Rudorn",
+        "type": "&nbsp;45.0",
+        "ev": "מהירות 2",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "60",
+            "atk": "65",
+            "def": "60",
+            "s_atk": "90",
+            "s_def": "75",
+            "spd": "70",
+            "total": "420"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/3-3.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/3-2.jpg",
+        "id": 2,
+        "name": "Mistelope",
+        "hebrewName": "Mistelope",
+        "type": "&nbsp;90.0",
+        "ev": "מהירות 3",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "80",
+            "atk": "90",
+            "def": "70",
+            "s_atk": "110",
+            "s_def": "95",
+            "spd": "85",
+            "total": "530"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/Untitled-2-1.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/4-1.jpg",
+        "id": 3,
+        "name": "Kuheat",
+        "hebrewName": "Kuheat",
+        "type": "&nbsp;7.0",
+        "ev": "התקפה מיוחדת 1",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "50",
+            "atk": "60",
+            "def": "50",
+            "s_atk": "50",
+            "s_def": "45",
+            "spd": "65",
+            "total": "320"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/23-1.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/5-1.jpg",
+        "id": 4,
+        "name": "Streleton",
+        "hebrewName": "Streleton",
+        "type": "&nbsp;15.0",
+        "ev": "התקפה 1<br>\nהתקפה מיוחדת 1",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "60",
+            "atk": "85",
+            "def": "60",
+            "s_atk": "80",
+            "s_def": "60",
+            "spd": "75",
+            "total": "420"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/34.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/6-1.jpg",
+        "id": 5,
+        "name": "Vespyre",
+        "hebrewName": "Vespyre",
+        "type": "&nbsp;210.0",
+        "ev": "התקפה 3",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "78",
+            "atk": "120",
+            "def": "95",
+            "s_atk": "100",
+            "s_def": "70",
+            "spd": "70",
+            "total": "533"
+        }
+    }, {
+        "thumbnail": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/1-2.jpg",
+        "image": "https://www.pocketmonsters.co.il/wp-content/uploads/2020/06/7-1.jpg",
+        "id": 6,
+        "name": "Slieon",
+        "hebrewName": "Slieon",
+        "type": "&nbsp;50.0",
+        "ev": "התקפה 1",
+        "catchRate": "&nbsp;45",
+        "happiness": "&nbsp;70",
+        "baseStats": {
+            "hp": "60",
+            "atk": "55",
+            "def": "50",
+            "s_atk": "55",
+            "s_def": "45",
+            "spd": "65",
+            "total": "330"
+        }
+    }]
+}
