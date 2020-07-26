@@ -1,6 +1,7 @@
 A sample web scraper using nodejs and puppeteer
 
-##TODO:
+## TODO:
+
 [ ] make it async
 [ ] make it pull types right
 [ ] make the script download the images
