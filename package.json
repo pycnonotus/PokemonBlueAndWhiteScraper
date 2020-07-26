@@ -1,0 +1,19 @@
+{
+  "name": "pokemonblueandwhitescraper",
+  "version": "1.0.0",
+  "description": "Scrap data from Pokemon blue and white website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set DEBUG=* & node app.js",
+    "lint": "./node_modules/.bin/eslint app.js"
+  },
+  "author": "AntonG (Pycnonotus)",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0"
+  }
+}
