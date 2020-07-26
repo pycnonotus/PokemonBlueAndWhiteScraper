@@ -2,10 +2,10 @@ A sample web scraper using nodejs and puppeteer
 
 ## TODO:
 
-[ ] make it async
-[ ] make it pull types right
-[ ] make the script download the images
-[ ] ignore whitespace
+    [ ] make it async
+    [ ] make it pull types right
+    [ ] make the script download the images
+    [ ] ignore whitespace
 
 ## in the future:
 
