@@ -52,7 +52,7 @@ async function run() {
             return {
                 "thumbnail": thumbnail,
                 image: img,
-                id: i,
+                id: i + 1,
                 "name": name,
                 hebrewName: hebrewName,
                 type: type,
