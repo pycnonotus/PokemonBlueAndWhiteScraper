@@ -3,6 +3,63 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 const urls = require('./pokemonsUrl.json');
 
+function htmlToType(elment) {
+    console.log("raw: " + elment);
+    let types = elment.split('&nbsp;');
+    let ret = [];
+    for (let t of types) {
+        let f = htmlToTypeHelper(t);
+        console.log('f: ' + f);
+        if (f !== '') {
+            ret.push(f);
+
+        }
+    }
+
+
+
+
+    return ret;
+
+}
+
+function htmlToTypeHelper(elment) {
+    elment = elment.replace('<', '');
+    elment = elment.replace('img', '');
+    elment = elment.replace('src', '');
+    elment = elment.replace('>', '');
+    elment = elment.replace('"', '');
+    elment = elment.replace('"', '');
+    elment = elment.replace(' ', '');
+    elment = elment.replace(' ', '');
+    elment = elment.replace('=', '');
+    console.log('sub: ' + elment);
+    switch (elment) {
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%90%D7%A9.png':
+            return 'fire';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A2%D7%9C-%D7%97%D7%95%D7%A9%D7%99.png':
+            return 'psychic';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%A2%D7%95%D7%A4%D7%A3.png':
+            return 'flying';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%97%D7%A9%D7%9E%D7%9C.png':
+            return 'electric';
+        case 'img src="https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%99%D7%9D.png':
+            return 'water';
+        case 'img src="https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A7%D7%A8%D7%97.png':
+            return 'ice';
+        case 'http://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%AA%D7%9B%D7%AA.png':
+            return 'steel';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A2%D7%A9%D7%91.png':
+            return 'grass';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A4%D7%99%D7%94.png':
+            return 'fairy';
+        default:
+            return elment;
+    }
+}
+
+
+
 async function run() {
 
     const browser = await puppeteer.launch({
@@ -35,8 +92,9 @@ async function run() {
             let img = document.querySelector('#main-content .entry p img').src; // small image
             let selector = document.querySelectorAll('#main-content .entry  tbody');
             let name = selector[0].querySelectorAll("tr")[1].querySelectorAll("td")[1].innerHTML;
-            let hebrewName = selector[0].querySelectorAll("tr")[1].querySelectorAll("td")[1].innerHTML;
-            let type = selector[2].querySelectorAll("tr")[1].querySelectorAll("td")[1].innerHTML;
+            let hebrewName = selector[0].querySelectorAll("tr")[1].querySelectorAll("td")[0].innerHTML;
+            hebrewName = hebrewName.split("").reverse().join(""); // hebrewName is reversed 
+            let type = selector[1].querySelectorAll("tr")[1].querySelectorAll("td")[1].innerHTML;
             let ev = selector[3].querySelectorAll("tr")[1].querySelectorAll("td")[0].innerHTML;
             let catchRate = selector[3].querySelectorAll("tr")[1].querySelectorAll("td")[1].innerHTML;
             let happiness = selector[3].querySelectorAll("tr")[1].querySelectorAll("td")[2].innerHTML;
@@ -62,7 +120,7 @@ async function run() {
                 baseStats: baseStats
             };
         }, i);
-
+        data.type = htmlToType(data.type);
         i++;
         console.log(data);
         pokemons.info.push(data);
