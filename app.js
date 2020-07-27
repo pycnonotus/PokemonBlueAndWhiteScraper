@@ -5,7 +5,30 @@ const urls = require('./pokemonsUrl.json');
 
 function htmlToType(elment) {
     console.log("raw: " + elment);
-    let types = elment.split('&nbsp;');
+    //TODO: clean this mess
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp;', '');
+    elment = elment.replace('nbsp', '');
+    elment = elment.replace('nbsp', '');
+    elment = elment.replace('nbsp', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    elment = elment.replace('&', '');
+    console.log("raw edited: " + elment);
+    let types = [];
+    if (elment.includes('nbsp')) {
+        types = elment.split('&nbsp;');
+    } else {
+        types = elment.split('><')
+    }
     let ret = [];
     for (let t of types) {
         let f = htmlToTypeHelper(t);
@@ -33,6 +56,11 @@ function htmlToTypeHelper(elment) {
     elment = elment.replace(' ', '');
     elment = elment.replace(' ', '');
     elment = elment.replace('=', '');
+    elment = elment.replace('stylefont-family:inherit; font-size: inherit; =', '');
+    elment = elment.replace('"', '');
+    elment = elment.replace('"', '');
+    elment = elment.replace('"', '');
+    elment = elment.replace('"', '');
     console.log('sub: ' + elment);
     switch (elment) {
         case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%90%D7%A9.png':
@@ -43,9 +71,9 @@ function htmlToTypeHelper(elment) {
             return 'flying';
         case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%97%D7%A9%D7%9E%D7%9C.png':
             return 'electric';
-        case 'img src="https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%99%D7%9D.png':
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%99%D7%9D.png':
             return 'water';
-        case 'img src="https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A7%D7%A8%D7%97.png':
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A7%D7%A8%D7%97.png':
             return 'ice';
         case 'http://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%AA%D7%9B%D7%AA.png':
             return 'steel';
@@ -53,8 +81,37 @@ function htmlToTypeHelper(elment) {
             return 'grass';
         case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A4%D7%99%D7%94.png':
             return 'fairy';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A0%D7%95%D7%A8%D7%9E%D7%9C%D7%99.png':
+            return 'normal';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9E%D7%AA%D7%9B%D7%AA.png':
+            return 'steel';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A8%D7%95%D7%97.png':
+            return 'ghost';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%90%D7%95%D7%A4%D7%9C.png':
+            return 'dark';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%9C%D7%97%D7%99%D7%9E%D7%94.png':
+            return 'fighting';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%97%D7%A8%D7%A7.png':
+            return 'bug';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%93%D7%A8%D7%A7%D7%95%D7%9F.png':
+            return 'dragon';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/04/%D7%AA%D7%A8%D7%91%D7%95%D7%AA.png':
+            return 'culture';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%A8%D7%A2%D7%9C.png':
+            return 'poison';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/04/%D7%9E%D7%93%D7%A2.png':
+            return 'science';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%90%D7%93%D7%9E%D7%94.png':
+            return 'ground';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/01/%D7%90%D7%91%D7%9F.png':
+            return 'rock';
+        case 'https://www.pocketmonsters.co.il/wp-content/uploads/2020/04/%D7%93%D7%AA.png':
+            return 'religion';
+        case ' ':
+        case '':
+            return '';
         default:
-            return elment;
+            return elment + "   NOT FOUND";
     }
 }
 
